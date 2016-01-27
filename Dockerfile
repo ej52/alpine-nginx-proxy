@@ -9,6 +9,7 @@ COPY forego /usr/local/bin/
 # forego fails w/ /bin/sh. install /bin/bash
 RUN apk --update add bash
 
+ENV DOCKER_GEN_VERSION 0.5.0
 
 RUN wget -O- \
  https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz | \

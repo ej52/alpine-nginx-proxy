@@ -9,6 +9,8 @@ RUN apk --no-cache add bash
 
 ENV DOCKER_GEN_VERSION 0.5.0
 
+ENV DOCKER_GEN_VERSION 0.5.0
+
 RUN wget -O- \
  https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz | \
  tar -C /usr/local/bin -xvzf - && chown root:root /usr/local/bin/docker-gen

@@ -7,7 +7,7 @@ RUN sed -i 's/^http {/&\n    server_names_hash_bucket_size 128;/g' /etc/nginx/ng
 # forego fails w/ /bin/sh. install /bin/bash
 RUN apk --no-cache add bash
 
-ENV DOCKER_GEN_VERSION 0.5.0
+ENV DOCKER_GEN_VERSION 0.7.3
 
 RUN wget -O- \
  https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz | \

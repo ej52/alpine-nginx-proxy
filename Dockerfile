@@ -13,8 +13,7 @@ RUN wget -O- \
  https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKER_GEN_VERSION.tar.gz | \
  tar -C /usr/local/bin -xvzf - && chown root:root /usr/local/bin/docker-gen
 
-ADD root /app/
-WORKDIR /app/
+ADD root /
 
 ENV DOCKER_HOST unix:///tmp/docker.sock
 
